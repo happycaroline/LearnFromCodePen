@@ -13,49 +13,62 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <style type="text/css">
-   figure.effect-milo {
-	background: #2e5d5a;
+/*---------------*/
+/***** Dexter *****/
+/*---------------*/
+
+figure.effect-dexter {
+	background: -webkit-linear-gradient(top, rgba(37,141,200,1) 0%, rgba(104,60,19,1) 100%);
+	background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%); 
 }
 
-figure.effect-milo img {
-	max-width: none;
-	width: -webkit-calc(100% + 60px);
-	width: calc(100% + 60px);
-	opacity: 1;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-30px,0,0) scale(1.12);
-	transform: translate3d(-30px,0,0) scale(1.12);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+figure.effect-dexter img {
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
 }
 
-figure.effect-milo:hover img {
-	opacity: 0.5;
-	-webkit-transform: translate3d(0,0,0) scale(1);
-	transform: translate3d(0,0,0) scale(1);
+figure.effect-dexter:hover img {
+	opacity: 0.4;
 }
 
-figure.effect-milo h2 {
+figure.effect-dexter figcaption::after {
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 1em 1.2em;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	height: -webkit-calc(50% - 30px);
+	height: calc(50% - 30px);
+	border: 7px solid #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-100%,0);
+	transform: translate3d(0,-100%,0);
 }
 
-figure.effect-milo p {
-	padding: 0 10px 0 0;
-	width: 50%;
-	border-right: 1px solid #fff;
-	text-align: right;
+figure.effect-dexter:hover figcaption::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-dexter figcaption {
+	padding: 3em;
+	text-align: left;
+}
+
+figure.effect-dexter p {
+	position: absolute;
+	right: 60px;
+	bottom: 60px;
+	left: 60px;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-40px,0,0);
-	transform: translate3d(-40px,0,0);
+	-webkit-transform: translate3d(0,-100px,0);
+	transform: translate3d(0,-100px,0);
 }
 
-figure.effect-milo:hover p {
+figure.effect-dexter:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
@@ -67,17 +80,12 @@ figure.effect-milo:hover p {
 </head>
 <body>
 
-	
-<div class="grid">
-			<figure class="effect-milo">
-				<img src="img/11.jpg" alt="img11"/>
-							
-			</figure>
-			<figure class="effect-milo">
-				<img src="img/3.jpg" alt="img03"/>
+		<div class="grid">
+			<figure class="effect-dexter">
+				<img src="img/19.jpg" alt="img19"/>
 				<figcaption>
-					<h2>Faithful <span>Milo</span></h2>
-					<p>Milo went to the woods. He took a fun ride and never came back.</p>
+					<h2>Strange <span>Dexter</span></h2>
+					<p>Dexter had his own strange way. You could watch him training ants.</p>
 					<a href="#">View more</a>
 				</figcaption>			
 			</figure>
