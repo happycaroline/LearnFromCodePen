@@ -723,7 +723,7 @@ figure.effect-apollo figcaption::before {
 }
 
 figure.effect-apollo p {
-	position: absolute;
+	position: absolute; 
 	right: 0;
 	bottom: 0;
 	margin: 3em;
